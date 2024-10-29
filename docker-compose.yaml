@@ -1,23 +1,23 @@
 version: '3.0'
-  services:
-    barista-service:
-      build: ./barista
-      ports:
-        - 81:80
-      volumes:
-        - barista-vol:/usr/local/apache2/htdocs
-    finance-service:    
-      build: ./finance
-      ports:
-        - 82:80
-      volumes:
-        - finance-vol:/usr/local/apache2/htdocs
-    crispy-service:
-      build: ./crispy
-      ports:
-        - 83:80
-      volumes:
-        - crispy-vol:/usr/local/apache2/htdocs
+services:
+  barista-service:
+    build: ./barista
+    ports:
+      - 81:80
+    volumes:
+      - barista-vol:/usr/local/apache2/htdocs
+  finance-service:    
+    build: ./finance
+    ports:
+      - 82:80
+    volumes:
+      - finance-vol:/usr/local/apache2/htdocs
+  crispy-service:
+    build: ./crispy
+    ports:
+      - 83:80
+    volumes:
+      - crispy-vol:/usr/local/apache2/htdocs
 volumes:
   barista-vol:
   finance-vol:
